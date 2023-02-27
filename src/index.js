@@ -1,12 +1,16 @@
 import Notiflix from 'notiflix';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import { fetchArticles } from './js/apiPixabay';
 import { createCards } from './js/cardPhoto';
 
 const searchForm = document.querySelector('.search-form');
 const searchText = document.querySelector('.input');
-const searchButton = document.querySelector('.btn-src');
+const searchButton = document.querySelector('.btn-search');
 const gallery = document.querySelector('.gallery');
 const loadMoreButton = document.querySelector('.btn-more');
+
+const title = document.querySelector('.counter');
 
 let query = '';
 let totalHits = 0;
@@ -21,7 +25,7 @@ function onSearch(e) {
   page = 1;
   query = e.currentTarget.searchQuery.value.trim();
   clearFormGallery();
-  loadMoreButton.classList.toggle('is-hidden');
+  loadMoreButton.classList.add('is-hidden');
   if (query === '') {
     noInfoForSearch();
     return;

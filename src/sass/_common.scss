@@ -15,6 +15,7 @@
   justify-content: center;
   padding: 10px;
 }
+
 .btn-src {
   width: 100px;
   cursor: pointer;
@@ -26,26 +27,6 @@
   font-size: 15px;
 }
 
-.search-form {
-  position: fixed;
-  width: 100vw;
-  left: 0;
-  top: 0;
-  right: 0;
-  background-color: rgba(117, 60, 84, 0.699);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  height: auto;
-}
-.gallery {
-  margin-left: -10px;
-  padding-top: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
 .btn-more {
   position: relative;
   left: 50%;
@@ -60,38 +41,73 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  color: azure;
+  color: whitesmoke;
 }
 
 .btn-more.is-hidden {
   display: none;
 }
-// .photo-card {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-evenly;
-// }
 
-// .gallery__image {
-//   display: block;
-//   height: 30vh;
-//   object-fit: cover;
-// }
+.search-form {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(117, 60, 84, 0.699);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  height: auto;
+}
 
-// .info {
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: 10px;
-//   justify-content: space-around;
-// }
+.gallery {
+  margin-left: -10px;
+  padding-top: 60px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-// .info__item {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   color: #000;
-// }
+.gallery__item {
+  margin-top: 10px;
+  margin-left: 10px;
+  min-width: 320px;
+  border: 2px solid #f1eeee;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+  flex-basis: calc((100% - 10px) / 5);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
 
-// .gallery__item {
-//   text-decoration: none;
-// }
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gallery__image {
+  display: block;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.info__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+}
+
+.gallery__item {
+  text-decoration: none;
+}
