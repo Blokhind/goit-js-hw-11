@@ -21,7 +21,7 @@ function onSearch(e) {
   page = 1;
   query = e.currentTarget.searchQuery.value.trim();
   clearFormGallery();
-  loadMoreButton.classList.add('is-hidden');
+  loadMoreButton.classList.toggle('is-hidden');
   if (query === '') {
     noInfoForSearch();
     return;
