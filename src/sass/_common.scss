@@ -62,6 +62,10 @@
   cursor: pointer;
   color: azure;
 }
+
+.btn-more.is-hidden {
+  display: none;
+}
 // .photo-card {
 //   display: flex;
 //   flex-direction: column;
